@@ -9,6 +9,7 @@ function App() {
   const [page, setPage] = useState(3)
   const [limit, setLimit] = useState(5)
   const [len, setLen] = useState()
+  console.log(setLimit);
 
   const getdata = () => {
     axios.get(`https://for-xurshidbekvabolalaruchunserver-production.up.railway.app/data?_limit=${limit}&_page=${page}`)
@@ -28,6 +29,7 @@ function App() {
   useEffect(() => {
     getdata()
     allData()
+    //eslint-disable-next-line
   }, [limit, page] )
 
   return (
